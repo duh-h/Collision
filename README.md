@@ -10,8 +10,11 @@ J = -(1 + e) * Vr / (1/m1 + 1/m2)
 onde:
 
 J é o impulso a ser aplicado durante a colisão.
+
 e é a elasticidade da colisão, um valor entre 0 e 1 que representa a perda de energia na colisão (0 indica uma colisão perfeitamente inelástica, enquanto 1 indica uma colisão perfeitamente elástica).
+
 Vr é a velocidade relativa entre os corpos na direção da normal de colisão(Vr=Vp1.N).
+
 m1 e m2 são as massas dos corpos envolvidos na colisão.
 
 
