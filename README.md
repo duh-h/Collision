@@ -19,12 +19,9 @@ m1 e m2 são as massas dos corpos envolvidos na colisão.
 
 
 
-
-
-
-
+####
 ![exemplo_fisica](https://github.com/duh-h/Collision/assets/123125593/f7799f59-cdb8-489e-8cac-14ae5d5a54de)
-
+####
 
 Resumindo, aqui está uma visão geral dos cálculos envolvidos na colisão entre a bola e o pêndulo:
 
@@ -32,9 +29,9 @@ Resumindo, aqui está uma visão geral dos cálculos envolvidos na colisão entr
 
 ma, mb: massas dos corpos A (bola) e B (pêndulo).
 
-rap: vetor de distância do centro de massa do corpo A ao ponto de colisão P.
+Va: vetor de distância do centro de massa do corpo A ao ponto de colisão P.
 
-rbp: vetor de distância do centro de massa do corpo B ao ponto de colisão P.
+Vb: vetor de distância do centro de massa do corpo B ao ponto de colisão P.
 
 ωa1, ωb1: velocidades angulares iniciais pré-colisão dos corpos A e B.
 
@@ -58,15 +55,15 @@ e: elasticidade da colisão (valor entre 0 e 1).
 
 <H4>2.Calcular as velocidades pré-colisão dos pontos de colisão:</H4>
 
-vap1 = va1 + ωa1 × rap
+vap1 = va1 + ωa1 × Va
 
-vbp1 = vb1 + ωb1 × rbp
+vbp1 = vb1 + ωb1 × Vb
 
 <H4>3.Calcular as velocidades pós-colisão dos pontos de colisão:</H4>
 
-vap2 = va2 + ωa2 × rap
+vap2 = va2 + ωa2 × Va
 
-vbp2 = vb2 + ωb2 × rbp
+vbp2 = vb2 + ωb2 × Vb
 
 <H4>4.Calcular as velocidades relativas nos pontos de colisão:</H4>
 
@@ -80,7 +77,7 @@ velocidade normal relativa = vp1 · n
 
 <H4>6.Calcular o impulso de colisão (parâmetro j):</H4>
 
-j = -(1 + e) * (vp1 · n) / (1/ma + 1/mb + (rap × n)² / Ia + (rbp × n)² / Ib)
+j = -(1 + e) * (vp1 · n) / (1/ma + 1/mb + (Va × n)² / Ia + (Vb × n)² / Ib)
 
 <H4>7.Calcular as velocidades pós-colisão:</H4>
 
@@ -88,21 +85,17 @@ va2 = va1 + (j * n) / ma
 
 vb2 = vb1 - (j * n) / mb
 
-ωa2 = ωa1 + (rap × (j * n)) / Ia
+ωa2 = ωa1 + (Va × (j * n)) / Ia
 
-ωb2 = ωb1 - (rbp × (j * n)) / Ib
+ωb2 = ωb1 - (Vb × (j * n)) / Ib
 
-Esses cálculos são baseados nas fórmulas e conceitos da física envolvidos em colisões elásticas. O impulso de colisão é utilizado para determinar as mudanças nas velocidades e velocidades angulares dos corpos após a colisão. Vale ressaltar que a implementação exata desses cálculos pode depender do contexto e das especificações detalhadas do sistema físico em questão.
-
-
+Esses cálculos são baseados nas fórmulas e conceitos da física envolvidos em colisões elásticas. O impulso de colisão é utilizado para determinar as mudanças nas velocidades e velocidades angulares dos corpos após a colisão.
 
 
 
 
 
-
-
-
+########
 
 https://github.com/duh-h/Collision/assets/123125593/74691f16-795f-4c1b-b95b-0e0b9d3e8c08
 
