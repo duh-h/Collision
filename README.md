@@ -27,7 +27,7 @@ Resumindo, aqui está uma visão geral dos cálculos envolvidos na colisão entr
 
 <H4>1.Definir os parâmetros:</H4>
 
-ma, mb: massas dos corpos A (bola) e B (pêndulo).
+ma, mb: massas dos corpos A (pêndulo) e B (bola).
 
 Va: vetor de distância do centro de massa do corpo A ao ponto de colisão P.
 
@@ -49,7 +49,7 @@ vp1: velocidade relativa pré-colisão dos pontos de impacto nos corpos A e B.
 
 vp2: velocidade relativa pós-colisão dos pontos de impacto nos corpos A e B.
 
-n: vetor normal (perpendicular) à borda do corpo B.
+n: vetor normal (perpendicular) à borda do corpo A no ponto P.
 
 e: elasticidade da colisão (valor entre 0 e 1).
 
